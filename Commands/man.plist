@@ -11,7 +11,7 @@
 word=${TM_SELECTED_TEXT:-$TM_CURRENT_WORD}
 
 if [[ $word = '' ]]; then
-	word=$(ruby18 -wKU &lt;&lt;-'RUBYEOF'
+	word=$(ruby -wKU &lt;&lt;-'RUBYEOF'
 		require ENV["TM_SUPPORT_PATH"] + "/lib/ui.rb"
 		puts TextMate::UI.request_string(
 			:title =&gt; "Documentation for Word / Selection",
